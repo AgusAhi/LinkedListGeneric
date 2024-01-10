@@ -1,17 +1,17 @@
 // Insertas por arriba y sacas por arriba
-public class Stack {
-    private LinkedList list;
+public class Stack<E> {
+    private LinkedList<E> list;
 
     public Stack() {
-        list = new LinkedList();
+        list = new LinkedList<E>();
     }
 
-    public void push(Object object) {
+    public void push(E object) {
         list.insertFirst(object);
     }
 
-    public Object pop() throws EmptyListException, ObjectNotFoundException {
-        Object obj = list.getFirstObject();
+    public E pop() throws EmptyListException, ObjectNotFoundException {
+        E obj = list.getFirstObject();
         list.removeObject(obj);
         return obj;
     }
@@ -25,6 +25,6 @@ public class Stack {
     }
 
     public void empty() {
-        list = new LinkedList();
+        list = new LinkedList<E>();
     }
 }

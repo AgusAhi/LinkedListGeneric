@@ -1,7 +1,7 @@
 public class MainStack {
     public static void main(String[] args) throws ObjectNotFoundException {
         try {
-            Stack stack = new Stack();
+            Stack<String> stack = new Stack<String>();
 
             stack.push("One");
             stack.push("Two");

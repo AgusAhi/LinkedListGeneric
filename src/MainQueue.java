@@ -1,7 +1,7 @@
 public class MainQueue {
     public static void main(String[] args) throws ObjectNotFoundException {
         try {
-            Queue queue = new Queue();
+            Queue<String> queue = new Queue<String>();
 
             queue.push("One");
             queue.push("Two");

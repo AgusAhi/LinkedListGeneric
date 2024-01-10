@@ -1,17 +1,17 @@
 // Insertas por arriba y sacas por debajo
-public class Queue {
-    private LinkedList list;
+public class Queue<E> {
+    private LinkedList<E> list;
 
     public Queue() {
-        list = new LinkedList();
+        list = new LinkedList<E>();
     }
 
-    public void push(Object object) {
+    public void push(E object) {
         list.insertLast(object);
     }
 
-    public Object pop() throws EmptyListException, ObjectNotFoundException {
-        Object obj = list.getFirstObject();
+    public E pop() throws EmptyListException, ObjectNotFoundException {
+        E obj = list.getFirstObject();
         list.removeObject(obj);
         return obj;
     }
@@ -25,7 +25,7 @@ public class Queue {
     }
 
     public void empty() {
-        list = new LinkedList();
+        list = new LinkedList<E>();
     }
 
 }
